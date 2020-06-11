@@ -11,13 +11,13 @@ public class FindIndexOfOccurence {
         // Create a pattern object with which pattern we want to search on.
         Pattern myPat = Pattern.compile("ab");
         //We have to create a Matcher object by calling matcher method on the Pattern object providing the Target String to method parameter to perform pattern matching.
-        Matcher myMat = myPat.matcher("babaababbab");
+        Matcher myMat = myPat.matcher("ababaababbab");
 
         // If found enter
         while(myMat.find()){
             countOfOccurences++;
             // Display the occurence index
-            System.out.println(myMat.start());
+            System.out.println(myMat.start()+"-->"+myMat.end()+"-->"+myMat.group());
         }
 
         // Number of Occurences

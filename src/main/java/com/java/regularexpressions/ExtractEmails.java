@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class ExtractEmails {
 
     public static void main(String[] args) {
-        String info = "Ebill dated 27-May-19 bill for your airtel mobile will be sent to bharathkumar094@gmail.com shortly. Your ebill password (all lower case) is odg1. To continue receiving ebills, SMS STOP PAPER <your email id> to 121 from your airtel mobile.";
+        String info = "Ebill dated 27-May-19 bill for your airtel mobile will be sent to bharathkumar19900@gmail.com shortly. Your ebill password (all lower case) is odg1. To continue receiving ebills, SMS STOP PAPER <your email id> to 121 from your airtel mobile.";
         Pattern myPat1 = Pattern.compile("[A-Za-z0-9]+@[a-zA-Z0-9]+[.][a-zA-z]+");
         Matcher myMat1 = myPat1.matcher(info);
         while(myMat1.find()){

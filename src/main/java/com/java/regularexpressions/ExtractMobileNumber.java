@@ -7,7 +7,7 @@ public class ExtractMobileNumber {
 
     public static void main(String[] args) {
 
-        String str = "My Mobile number is 9898888888, Alternate number is 9898987779";
+        String str = "My Mobile number is 9898888888, Alternate number is 919898987779";
         System.out.println("--------1st Way----------");
         Pattern myPat1 = Pattern.compile("[7-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]");
         Matcher myMat1 = myPat1.matcher(str);
@@ -16,7 +16,7 @@ public class ExtractMobileNumber {
         }
 
         System.out.println("--------2nd Way----------");
-        Pattern myPat2 = Pattern.compile("[7-9][0-9]{9}");
+        Pattern myPat2 = Pattern.compile("[7-9][0-9]{9}$");
         Matcher myMat2 = myPat2.matcher(str);
         while(myMat2.find()){
             System.out.println(myMat2.group());

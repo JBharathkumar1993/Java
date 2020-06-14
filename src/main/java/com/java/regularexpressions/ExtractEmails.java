@@ -14,8 +14,8 @@ public class ExtractEmails {
             System.out.println(myMat1.group());
         }
 
-        String emailInfo = "My 1st EmailId is kumar_2019@gmail.com, Facebook mailid is facebook.20201@outlook.org, Alternative facebook mailid is facebook_20201@outlook.org.in";
-        Pattern myPat2 = Pattern.compile("[A-Za-z0-9_.]+@[a-zA-Z0-9]+([.][a-zA-z]+)+");
+        String emailInfo = "My 1st EmailId is kumar_2019@gmail.com, Facebook mailid is facebook.20201@outlook.org, Alternative facebook mailid is _facebook_20201@outlook.org.in";
+        Pattern myPat2 = Pattern.compile("[a-zA-Z][A-Za-z0-9_.]*@[a-zA-Z0-9]+([.][a-zA-z]+)+");
         Matcher myMat2 = myPat2.matcher(emailInfo);
         while(myMat2.find()){
             System.out.println(myMat2.group());
